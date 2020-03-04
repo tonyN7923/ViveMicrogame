@@ -10,6 +10,8 @@ public class bowling : MonoBehaviour
     public AudioClip strike;
     public AudioClip turkey;
 
+    public ParticleSystem strikeFX;
+
     public bool didHit = false;
     public bool didStrike = false;
     public bool didTurkey = false;
@@ -32,12 +34,18 @@ public class bowling : MonoBehaviour
         {
             pin.PlayOneShot(strike);
             didStrike = false;
+
+            //Also activate some sort of particle effect
+            strikeFX.Play();
         }
 
         if (didTurkey)
         {
             pin.PlayOneShot(turkey);
             didTurkey = false;
+
+            //Also throw some fuckin turkeys on the screen or something
+            strikeFX.Play();
         }
     }
 }
