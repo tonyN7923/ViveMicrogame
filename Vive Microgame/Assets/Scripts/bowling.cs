@@ -46,6 +46,7 @@ public class bowling : MonoBehaviour
 
             //Also throw some fuckin turkeys on the screen or something
             strikeFX.Play();
+            FXManager.Instance.EnableFX();
         }
     }
 }
